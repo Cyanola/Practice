@@ -4,7 +4,8 @@
 #include <iostream>
 
 using namespace std;
-
+using namespace System;
+using namespace System::Windows::Forms;
 
 const int width = 20;
 const int height = 20;
@@ -29,8 +30,8 @@ void Setup()
 void Draw()
 {
 	system("cls"); //system("clear");
-	for (int i = 0; i < width + 2; i++)
-		cout << "#";
+	for (int i = 0; i < width +2; i++)
+		cout<< "#";
 	cout << endl;
 
 	for (int i = 0; i < height; i++)
@@ -42,7 +43,7 @@ void Draw()
 			if (i == y && j == x)
 				cout << "O";
 			else if (i == fruitY && j == fruitX)
-				cout << "F";
+				cout << "*";
 			else
 			{
 				bool print = false;
@@ -57,8 +58,6 @@ void Draw()
 				if (!print)
 					cout << " ";
 			}
-
-
 			if (j == width - 1)
 				cout << "#";
 		}
